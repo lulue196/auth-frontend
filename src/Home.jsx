@@ -39,14 +39,23 @@ export default function Home() {
           <Typography sx={{ mr: 2 }}>
             {user?.username}
           </Typography>
+
           {user?.email === "admin@gmail.com" && (
-  <Button
-    color="inherit"
-    onClick={() => navigate("/users")}
-  >
-    User
-  </Button>
-)}
+            <Button
+              color="inherit"
+              onClick={() => navigate("/users")}
+            >
+              User
+            </Button>
+          )}
+
+          <Button
+            color="inherit"
+            onClick={() => navigate("/items")}
+          >
+            Item
+          </Button>
+
           <Button
             color="inherit"
             onClick={async () => {
